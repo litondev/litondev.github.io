@@ -153,7 +153,7 @@ function showPorto(id){
 				<span class="badge p-2">#Javscript</span>
 				<span class="badge p-2">#Bootstrap</span>
 				<span class="badge p-2">#Jquery</span>
-				<!-- <span class="badge p-2">#CodeIgniter</span> -->
+				<span class="badge p-2">#CodeIgniter</span>
 				<span class="badge p-2">#Laravel</span>				
 			</div>
 		</div>
@@ -169,7 +169,7 @@ function showPorto(id){
 
 			<div class="text-center" style="padding:30px">
 				<span class="btn-proto" onclick="showPorto('php')">Php</span>			
-				<!-- <span class="btn-proto" onclick="showPorto('codeigniter')">CodeIgniter</span>		-->	
+				<span class="btn-proto" onclick="showPorto('codeigniter')">CodeIgniter</span>
 				<span class="btn-proto" onclick="showPorto('laravel')">Laravel</span>
 			</div>
 
@@ -226,12 +226,12 @@ function showPorto(id){
 						</script>
 					<!-- LARAVEL CAMPRENT -->
 
-					<!-- LARAVEL PRJECT ARTIKEL -->
+					<!-- LARAVEL ARTIKEL -->
 						<div id="laravel-project-articel"></div>					
 						<script>
 							var Obj = {
 								id : 'laravel-project-articel',
-								title : 'Laravel 7 Perject Artikel',
+								title : 'Laravel 7 Artikel',
 								github : 'https://github.com/litondev/project-articel',
 								demo : '',
 								youtube : '',
@@ -240,14 +240,30 @@ function showPorto(id){
 
 							makePorto(Obj);
 						</script>
-					<!-- LARAVEL PROJECT ARTIKEL -->
+					<!-- LARAVEL ARTIKEL -->
 				</div>
 
-				<!-- <div id="codeigniter" class="the-porto" style="display:none"> -->
-					<!-- CODEIGNITER CAMPRENT -->
-						<!-- <div id="codeigniter-camprent"></div> -->
+				<div id="codeigniter" class="the-porto" style="display:none">
+					<!-- CODEIGNITER CHAT AJAX POLLING -->
+						<div id="codeigniter-chat-ajax-polling"></div>
 						<script>
-							/*
+							var Obj = {
+								id : "codeigniter-chat-ajax-polling",
+								title : "CodeIgniter 4 Chat",
+								github : "",
+								demo : "",
+								youtube : "",
+								url : "img/codeigniter/chat-ajax-polling/"
+							}
+
+							makePorto(Obj);							
+						</script>
+					<!-- CODEIGNITER CHAT AJAX POLLING -->
+
+					<!-- CODEIGNITER CAMPRENT -->
+						<div id="codeigniter-camprent"></div> 
+						<script>
+							
 							var Obj = {
 								id : 'codeigniter-camprent',
 								title : 'CodeIgniter 3 Persewan Alat Camping',
@@ -257,11 +273,10 @@ function showPorto(id){
 								url : 'img/codeigniter/camprent/'
 							};
 
-							makePorto(Obj);
-							*/
+							makePorto(Obj);							
 						</script>
 					<!-- CODEIGNITER CAMPRENT -->
-				<!-- </div> -->
+				</div> 
 			</div>
 		</div>
 		<!-- PORTO -->
