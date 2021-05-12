@@ -63,6 +63,11 @@ function showPorto(id){
 </script>
 
 <style>
+* {
+	scroll-behavior: smooth;
+	scroll-padding: 20px;
+}
+
 .navbar-default{
 	background:white;
 	box-shadow:0px 0px 2px 0px gray;
@@ -143,11 +148,12 @@ function showPorto(id){
 				<span class="badge p-2">#Javscript</span>
 				<span class="badge p-2">#Bootstrap</span>
 				<span class="badge p-2">#Jquery</span>
-				<span class="badge p-2">#CodeIgniter</span>
-				<span class="badge p-2">#Laravel</span>							
+				<!-- <span class="badge p-2">#CodeIgniter</span> -->
+				<span class="badge p-2">#Laravel</span>					
 				<!-- 
 					<span class="badge p-2">#Vue Js</span>
 					<span class="badge p-2">#React Js</span>			
+					<span class="badge p-2">#Node Js</span>			
 				-->
 			</div>
 		</div>
@@ -163,12 +169,11 @@ function showPorto(id){
 
 			<div class="text-center" style="padding:30px">
 				<span class="btn-proto" onclick="showPorto('php')">Php</span>			
-				<span class="btn-proto" onclick="showPorto('codeigniter')">CodeIgniter</span>
-				<span class="btn-proto" onclick="showPorto('laravel')">Laravel</span>			
-				<!-- 
-					<span class="btn-proto" onclick="showPorto('vue-js')">Vue Js</span>
-					<span class="btn-proto" onclick="showPorto('react-js')">React Js</span>				
-				-->
+				<!-- <span class="btn-proto" onclick="showPorto('codeigniter')">CodeIgniter</span> -->
+				<span class="btn-proto" onclick="showPorto('laravel')">Laravel</span>							
+				<!-- <span class="btn-proto" onclick="showPorto('vue-js')">Vue Js</span>
+				<span class="btn-proto" onclick="showPorto('react-js')">React Js</span>				
+				<span class="btn-proto" onclick="showPorto('node-js')">Node Js</span>	 -->		
 			</div>
 
 			<div style="height:300px;margin-top:39px">
@@ -310,6 +315,24 @@ function showPorto(id){
 							makePorto(Obj);							
 						</script>
 					<!-- REACT JS CHAT -->			
+				</div>
+
+				<div id="node-js" class="the-porto" style="display:none">
+					<!-- NODE JS PERPUS -->
+					<div id="node-js-perpus"></div> 
+						<script>						
+							var Obj = {
+								id : 'node-js-perpus',
+								title : 'Node Js Perpus',
+								github : '',
+								demo : '',
+								youtube : '',
+								url : 'img/node/perpus/'
+							};
+
+							makePorto(Obj);							
+						</script>
+					<!-- NODE JS PERPUS -->			
 				</div>
 			</div>
 		</div>
