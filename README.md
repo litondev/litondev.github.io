@@ -7,5 +7,5 @@
  
 <b> Open : </b>
  <p>
-  Try open this link <a href="https://litondev.github.io">My Portfolio</a>
+  Try open this link <a href="https://litondev.github.io" target="_blank">My Portfolio</a>
  </p>
