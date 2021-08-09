@@ -7,7 +7,7 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>	
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<title>Portofolio</title>
+		<title>Toni Widodo Portofolio</title>
 	</head>
 <body>
 
@@ -20,7 +20,7 @@ function makePorto(Obj){
 	insideDiv += "<div style='padding:10px'>";
 		insideDiv += "<h3>";
 		insideDiv += title;
-		insideDiv += "<small> (*Klik gambar untuk memperbesar gambar)</small>";
+		insideDiv += "<small> (*Click the images to zoom in)</small>";
 		insideDiv += "</h3>";
 	insideDiv += "</div>";
 
@@ -31,7 +31,7 @@ function makePorto(Obj){
 			if(github){
 				insideDiv += "<a target='blank' href='"+github+"'>Github</a>";
 			}else{
-				insideDiv += "Tidak Ada Github";
+				insideDiv += "No Github";
 			}
 		insideDiv += "</li>";
 
@@ -40,7 +40,7 @@ function makePorto(Obj){
 			if(demo){
 				insideDiv += "<a target='blank' href='"+demo+"'>Demo</a>";
 			}else{
-				insideDiv += "Tidak Ada Demo";
+				insideDiv += "No Demo";
 			}
 		insideDiv += "</li>";
 
