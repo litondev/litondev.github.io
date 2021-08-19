@@ -15,7 +15,7 @@
 <script>
 function makePorto(Obj){
 	var {id,title,github,demo,youtube,url} = Obj;
-
+	
 	var insideDiv = "";
 
 	insideDiv += "<div class='p-2'>";
@@ -62,11 +62,6 @@ function showPorto(id){
 	$(".the-porto").hide();
 	$("#"+id).show();
 }
-
-function showContact(id){
-	$(".the-contact").hide();
-	$("#"+id).show();
-}
 </script>
 
 <style>
@@ -88,6 +83,8 @@ function showContact(id){
 	padding-left:20px;
 	border-radius:10px;
 	cursor: pointer;
+	display: inline-block;
+	margin-top: 10px;
 }
 
 .btn-proto:hover{
@@ -99,7 +96,7 @@ function showContact(id){
 	font-family: bold;
 }
 .mb-60{
-	margin-bottom: 60px;
+	margin-bottom: 70px;
 	padding:20px;
 }
 .mt-5{
@@ -160,12 +157,30 @@ function showContact(id){
 <!-- CONTENT -->
 <div class="container">
 	<div class="row">
-		<div class="col-12 text-center mb-60" id="profil">
+		<div class="col-12 mb-60" id="profil"
+			style="min-height:600px">
 			<div class="text-center"> 
 				<h3>Profil</h3>
 			</div>
 
-			<span class="fs-15">H</span>ello there i am <b>Toni Widodo</b> web programmer and welcome to my Portofolio <br/>			
+			<div class="row">
+				<div class="col-md-6 text-center d-none mt-5 mb-5">
+					<img src="img/my.png" style="width:300px">
+				</div>
+				<div class="col-md-6 mt-5 mb-5">
+					<span class="fs-15">H</span>ello there i am <b>Toni Widodo</b> web programmer 
+
+					<br/>Welcome to my simple Portofolio<br/><br/>
+
+					I'am come from Indonesia, Jawa tengah, Sragen <br/> 			 
+					I have experince in web programming at least more then 1 year. <br/><br/>
+
+					I usually using php and laravel framework to work  <br/>
+					I person that easy learning something new and hard work. <br/><br/>		
+
+					Tanks for visited my simple portfolio and have nice day.
+				</div>				
+			</div>
 		</div>
 
 		<div class="col-12 mb-60" id="skill">
@@ -207,9 +222,9 @@ function showContact(id){
 			</div>
 
 			<div class="text-center p-2">
-				<span class="btn-proto" onclick="showPorto('php')">Php</span>			
+				<span class="btn-proto" onclick="showPorto('php')"><i class='fab fa-php'></i> Php</span>			
 				<span class="btn-proto" onclick="showPorto('codeigniter')">CodeIgniter</span> 
-				<span class="btn-proto" onclick="showPorto('laravel')">Laravel</span>							
+				<span class="btn-proto" onclick="showPorto('laravel')"><i class='fab fa-laravel'></i> Laravel</span>							
 			</div>
 
 			<div>
@@ -287,146 +302,20 @@ function showContact(id){
 			</div>
 		</div>
 
-		<div class="col-12 p-2" id="contact">
+		<div class="col-12 p-2" id="contact"
+			style="min-height:500px">
 			<div class="text-center p-2"> 
 				<h3>Contact</h3>
 			</div>
 
-			<div class="text-center the-contact mt-5">
-				<table class="table table-hover">
-					<tr>
-						<td>
-							Email 
-						</td>
-						<td>
-							<input type="text" value="litoninot12345@gmail.com" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href="mailto:litoninot12345@gmail.com"
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Send Email
-							</a>
-						</td>
-					</tr>
-					<tr>		
-						<td>
-							Phone / Wa
-						</td>			
-						<td>
-							<input type="text" value="085648730570" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href=""
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Wa Me
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Github Litoninotdev
-						</td>
-						<td>
-							<input type="text" value="https://github.com/litoninotdev" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href="https://github.com/litoninotdev"
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Visit
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Github Litondev
-						</td>
-						<td>
-							<input type="text" value="https://github.com/litondev" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href="https://github.com/litondev"
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Visit
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>Linkedin</td>
-						<td>
-							<input type="text" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href=""
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Visit
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>Facebook</td>
-						<td>
-							<input type="text" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href=""
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Visit
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Shuterstock
-						</td>
-						<td>
-							<input type="text" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href=""
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Visit
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Adobestock
-						</td>
-						<td>
-							<input type="text" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href=""
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Visit
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>Dribble</td>
-						<td>
-							<input type="text" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href=""
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Visit
-							</a>
-						</td>
-					</tr>				
-					<tr>
-						<td>Youtube</td>
-						<td>
-							<input type="text" class="input-contact">
-						</td>
-						<td>
-							<a class="btn btn-primary" href=""
-								target="_blank">
-								<i class="fab fa-telegram-plane"></i> Visit
-							</a>
-						</td>
-					</tr>
-				</table>		
+			<div class="mt-5">
+				<div style="font-size:20px"><b><i class='fa fa-envelope'></i> Email</b></div>			
+				<div style="font-size:15px;margin-top:5px">litoninot12345@gmail.com</div>					
+			</div>
+
+			<div class="mt-5">
+				<div style="font-size:20px"><b><i class='fa fa-phone'></i> Phone / Wa</b></div>
+				<div style="font-size:15px;margin-top:5px">085648730570</div>
 			</div>
 		</div>
 	</div>
