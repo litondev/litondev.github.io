@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width-device=width, initial-scale=1">
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>	
+		<script src="js/fontawesome.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<title>Portofolio</title>
 	</head>
@@ -17,7 +18,7 @@ function makePorto(Obj){
 
 	var insideDiv = "";
 
-	insideDiv += "<div style='padding:10px'>";
+	insideDiv += "<div class='p-2'>";
 		insideDiv += "<h3>";
 		insideDiv += title;
 		insideDiv += "<small> (*Click the images to zoom in)</small>";
@@ -47,7 +48,7 @@ function makePorto(Obj){
 		insideDiv += "<li class='list-group-item text-center'>";
 			for(var i=1;i<9;i++){
 				insideDiv += "<a target='blank' href='"+url + i +".png'>";			
-					insideDiv += "<img src='"+url + i +".png' width='300px' style='padding:10px'>";
+					insideDiv += "<img src='"+url + i +".png' width='300px' class='p-2'>";
 				insideDiv += "</a>";	
 			}
 		insideDiv += "</li>"
@@ -56,8 +57,14 @@ function makePorto(Obj){
 
 	$("#"+id).html(insideDiv);
 }
+
 function showPorto(id){
 	$(".the-porto").hide();
+	$("#"+id).show();
+}
+
+function showContact(id){
+	$(".the-contact").hide();
 	$("#"+id).show();
 }
 </script>
@@ -87,64 +94,125 @@ function showPorto(id){
 	background: gray;
 	color:white;
 }
+.fs-15{
+	font-size: 30px;
+	font-family: bold;
+}
+.mb-60{
+	margin-bottom: 60px;
+	padding:20px;
+}
+.mt-5{
+	margin-top: 25px;
+}
+.mb-5{
+	margin-bottom: :25px;
+}
+.p-2{
+	padding:10px;
+}
+.input-contact{
+	border-radius:5px;
+	padding:10px;
+	border:0px;
+	background:#eee;
+	width:100%;
+}
 </style>
 
 <!-- NAVBAR -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button class="navbar-toggle collapsed" 
-					data-toggle="collapse" 
-					data-target="#navbar">
-					<span class="icon-bar"></span>				
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>				
-			</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-brand">
+			Toni Widodo
+		</div>
 
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">	
- 				        <li>
-                                                <a href="#profil">Profil</a>
-                                        </li>
-                                        <li> 
-                                                <a href="#skill">Skill</a>
-                                        </li>
-					<li>
-						<a href="#portfolio">Portfolio</a>					
-					</li>
-          				<li>
-                                                <a href="#contact">Contact</a>
-                                        </li>
-				</ul>
-			</div>
-		</div>	
-	</nav>
+		<div class="navbar-header">
+			<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+				<span class="icon-bar"></span>				
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>				
+		</div>
+
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">	
+				<li>
+					<a href="#profil">Profil</a>
+				</li>
+				<li>
+					<a href="#skill">Skill</a>
+				</li>
+				<li>
+					<a href="#portfolio">Portfolio</a>
+				</li>	
+				<li>
+					<a href="#contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>	
+</nav>
 <!-- NAVBAR -->
 
-<!-- CONTENT -->
-<div class="container" style="margin-top:80px">
-	<div class="row">
-		<div class="col-12 text-center" style="margin-top:25px">
-                   <span style="font-size:25px">H</span>ello there i am <b>Toni Widodo</b> web programmer and welcome to my Portofolio
-                </div>
+<div style="height:51px;"></div>
 
-		<!-- PORTO -->
-		<div class="col-12" style="margin-top:25px">		
-			<div class="text-center" id="portfolio" style="padding:30px;text-shadow:0px 0px 10px lightgray"> 
-				<h2>Portfolio</h2>
+<!-- CONTENT -->
+<div class="container">
+	<div class="row">
+		<div class="col-12 text-center mb-60" id="profil">
+			<div class="text-center"> 
+				<h3>Profil</h3>
 			</div>
 
-			<div class="text-center" style="padding:30px">
+			<span class="fs-15">H</span>ello there i am <b>Toni Widodo</b> web programmer and welcome to my Portofolio <br/>			
+		</div>
+
+		<div class="col-12 mb-60" id="skill">
+			<div class="text-center"> 
+				<h3>Skill</h3>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 text-center mt-5 mb-5">
+					<i class="fab fa-html5 fa-5x"></i> 
+					<h4>Html</h4>
+				</div>
+				<div class="col-md-6 text-center mt-5 mb-5">
+					<i class="fab fa-css3 fa-5x"></i> 
+					<h4>Css</h4>
+				</div>
+				<div class="col-md-6 text-center mt-5 mb-5">
+					<i class="fab fa-js fa-5x"></i>
+					<h4>Javascript</h4>
+				</div>
+				<div class="col-md-6 text-center mt-5 mb-5">
+					<i class="fab fa-php fa-5x"></i>
+					<h4>Php</h4>
+				</div>
+				<div class="col-md-6 text-center mt-5 mb-5">
+					<i class="fab fa-mdb fa-5x"></i>
+					<h4>Mysql/Mariadb</h4>
+				</div>
+				<div class="col-md-6 text-center mt-5 mb-5">
+					<i class="fab fa-laravel fa-5x"></i>
+					<h4>Laravel</h4>
+				</div>				
+			</div>
+		</div>
+		
+		<div class="col-12 mb-60" id="portfolio">
+			<div class="text-center p-2"> 
+				<h3>Portfolio</h3>
+			</div>
+
+			<div class="text-center p-2">
 				<span class="btn-proto" onclick="showPorto('php')">Php</span>			
 				<span class="btn-proto" onclick="showPorto('codeigniter')">CodeIgniter</span> 
 				<span class="btn-proto" onclick="showPorto('laravel')">Laravel</span>							
-				<!-- <span class="btn-proto" onclick="showPorto('vue-js')">Vue Js</span>
-				<span class="btn-proto" onclick="showPorto('react-js')">React Js</span>				
-				<span class="btn-proto" onclick="showPorto('node-js')">Node Js</span>	 -->		
 			</div>
 
-			<div style="height:300px;margin-top:39px">
+			<div>
 				<div id="php" class="the-porto">
 					<!-- PHP NATIVE EJOURNAL FUNCTION -->
 						<div id="php-native-ejournal-function"></div>
@@ -181,22 +249,6 @@ function showPorto(id){
 				</div>		
 
 				<div id="laravel" class="the-porto" style="display:none">
-					<!-- LARAVEL CAMPRENT 
-						<div id="laravel-camprent"></div>					
-						<script>
-							var Obj = {
-								id : 'laravel-camprent',
-								title : 'Laravel 7 Persewan Alat Camping',
-								github : 'https://github.com/litondev/laravel-7-rent-camping-tools',
-								demo : '',
-								youtube : 'https://www.youtube.com/watch?v=zugTMDpYPbM&t=23s',
-								url : 'img/laravel/camprent/'
-							};
-
-							makePorto(Obj);
-						</script>
-					LARAVEL CAMPRENT -->
-
 					<!-- LARAVEL ARTIKEL -->
 						<div id="laravel-project-articel"></div>					
 						<script>
@@ -231,85 +283,154 @@ function showPorto(id){
 						</script>
 				
 					<!-- CODEIGNITER CHAT AJAX POLLING -->
-
-					<!-- CODEIGNITER CAMPRENT -->
-						<!-- div id="codeigniter-camprent"></div>						
-						<script>
-							
-							var Obj = {
-								id : 'codeigniter-camprent',
-								title : 'CodeIgniter 3 Persewan Alat Camping',
-								github : 'https://github.com/litondev/codeIgniter-3-rent-camping-tools',
-								demo : '',
-								youtube : 'https://www.youtube.com/watch?v=zugTMDpYPbM&t=23s',
-								url : 'img/codeigniter/camprent/'
-							};
-
-							makePorto(Obj);							
-						</script>
-						-->
-					<!-- CODEIGNITER CAMPRENT -->
 				</div> 
-
-				<div id="vue-js" class="the-porto" style="display:none">
-					<!-- VUE JS CATRING -->
-					<div id="vue-catring"></div>
-						<script>
-							var Obj = {
-								id : 'vue-catring',
-								title : 'Laravel 7 Vue Catring',
-								github : 'https://github.com/litondev/laravel-7-vue-catring',
-								demo : '',
-								youtube : '',
-								url : 'img/vue/catring/'
-							}
-
-							makePorto(Obj);
-						</script>
-					<!-- VUE JS CATRING -->
-				</div>
-
-				<div id="react-js" class="the-porto" style="display:none">
-					<!-- REACT JS CHAT -->
-					<div id="react-chat"></div> 
-						<script>						
-							var Obj = {
-								id : 'react-chat',
-								title : 'Laravel 7 React Chat',
-								github : 'https://github.com/litondev/laravel-7-react-chat',
-								demo : '',
-								youtube : '',
-								url : 'img/react/chat/'
-							};
-
-							makePorto(Obj);							
-						</script>
-					<!-- REACT JS CHAT -->			
-				</div>
-
-				<div id="node-js" class="the-porto" style="display:none">
-					<!-- NODE JS PERPUS -->
-					<div id="node-js-perpus"></div> 
-						<script>						
-							var Obj = {
-								id : 'node-js-perpus',
-								title : 'Node Js Perpus',
-								github : '',
-								demo : '',
-								youtube : '',
-								url : 'img/node/perpus/'
-							};
-
-							makePorto(Obj);							
-						</script>
-					<!-- NODE JS PERPUS -->			
-				</div>
 			</div>
 		</div>
-		<!-- PORTO -->
+
+		<div class="col-12 p-2" id="contact">
+			<div class="text-center p-2"> 
+				<h3>Contact</h3>
+			</div>
+
+			<div class="text-center the-contact mt-5">
+				<table class="table table-hover">
+					<tr>
+						<td>
+							Email 
+						</td>
+						<td>
+							<input type="text" value="litoninot12345@gmail.com" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href="mailto:litoninot12345@gmail.com"
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Send Email
+							</a>
+						</td>
+					</tr>
+					<tr>		
+						<td>
+							Phone / Wa
+						</td>			
+						<td>
+							<input type="text" value="085648730570" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href=""
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Wa Me
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Github Litoninotdev
+						</td>
+						<td>
+							<input type="text" value="https://github.com/litoninotdev" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href="https://github.com/litoninotdev"
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Visit
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Github Litondev
+						</td>
+						<td>
+							<input type="text" value="https://github.com/litondev" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href="https://github.com/litondev"
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Visit
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>Linkedin</td>
+						<td>
+							<input type="text" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href=""
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Visit
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>Facebook</td>
+						<td>
+							<input type="text" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href=""
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Visit
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Shuterstock
+						</td>
+						<td>
+							<input type="text" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href=""
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Visit
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Adobestock
+						</td>
+						<td>
+							<input type="text" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href=""
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Visit
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>Dribble</td>
+						<td>
+							<input type="text" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href=""
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Visit
+							</a>
+						</td>
+					</tr>				
+					<tr>
+						<td>Youtube</td>
+						<td>
+							<input type="text" class="input-contact">
+						</td>
+						<td>
+							<a class="btn btn-primary" href=""
+								target="_blank">
+								<i class="fab fa-telegram-plane"></i> Visit
+							</a>
+						</td>
+					</tr>
+				</table>		
+			</div>
+		</div>
 	</div>
 </div>
 <!-- CONTENT -->
-
 </body>
 </html>
