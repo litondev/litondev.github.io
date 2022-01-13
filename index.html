@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <script src="src/assets/vendors/fontawesome/js/all.min.js"></script>
+  <script defer src="js/popperjs.js"></script><script defer src="js/bootstrap.js"></script><script defer src="js/main.js"></script><link href="css/bootstrap.css" rel="stylesheet"><link href="css/main.css" rel="stylesheet"></head>
+  <body class="m-0 p-0">
+
+      <!-- MENU -->
+      <div class="container-fluid m-0 p-0"      
+        id="np-menu">
+        <div class="container np-navbar">
+          <img src="src/assets/images/background-navbar.svg" 
+            class="np-image-navbar">
+
+          <ul class="np-navbar-menu">
+            <li class="np-list-navbar-menu">
+              <a href="#">
+                About
+              </a>
+            </li>
+            <li class="np-list-navbar-menu">
+              <a href="#np-skill">
+                Skill
+              </a>
+            </li>
+            <li class="np-list-navbar-menu">
+              <a href="#np-portfolio">
+                Portfolio
+              </a>
+            </li>
+            <li class="np-list-navbar-menu">
+              <a href="#np-contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>        
+      </div>
+
+      <style>
+        #np-menu{
+          min-height: 200px;
+        }
+
+        .np-navbar{
+            position    : relative;
+            max-width   : 2000px;
+            font-size   : 14px;
+            height      : 150px;
+            padding     : 0px
+        }
+
+        .np-navbar:after {
+            content     : '';
+            display     : block;
+          }
+
+        .np-image-navbar{
+            position    : absolute;
+            right       : 0px;
+            top         : 0px
+        }
+
+        .np-navbar-menu{
+            position    : absolute;
+            top:20px;
+            right:80px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .np-list-navbar-menu{
+            float: left;
+            min-width: 120px;
+            text-align:center;
+            font-weight: 300px;
+            color:white;
+        }
+
+        .np-list-navbar-menu > a{
+            display: block;
+            width:90px;
+            text-decoration: none;
+            color:white;
+            border-bottom:2px solid white;
+            transition: backgroud 1s,color 1s, border 1s;
+        }
+
+        .np-list-navbar-menu > a.active{
+            border-bottom:2px solid none;
+        }
+
+        .np-list-navbar-menu > a:hover{
+            background-color: white;
+            color : black;
+            border-bottom:2px solid none;
+        }
+      </style>
+      <!-- MENU -->
+
+      <!-- ABOUT -->
+      <div class="container d-flex flex-row justify-content-between" 
+        id="np-about">
+        <div>
+          <img src="src/assets/images/my.svg" 
+            style="height:400px">
+        </div>
+        <div class="mt-5">
+          <div class="text-center">
+            <h3>About</h3>
+          </div>
+          <p class="mt-5" style="line-height: 2rem;">
+            Hello There i'am Toni
+            <br/>
+            i have experince in web programming at least more than 2 years
+            <br/>
+            i usually using laravel framework due to finish my project 
+          </p>
+        </div>
+      </div>
+
+      <style>
+        #np-about{
+          min-height:600px;
+        }
+      </style>
+      <!-- ABOUT -->
+      
+      <!-- SKILL -->
+      <div class="container-fluid m-0 p-0"
+        id="np-skill">
+          <div class="container p-0 np-container-skill">
+            <img src="src/assets/images/background-skill.svg" 
+              style="width:100%"
+              data-aos="fade-up" 
+              data-aos-anchor-placement="top-center">
+
+            <div class="np-content-skill">
+              <div class="np-inner-content-skill"
+               data-aos="fade-up" 
+               data-aos-anchor-placement="top-center">
+                <div class="text-center">
+                  <h3>Skill</h3>
+                </div>
+
+                <div class="row mt-5">
+                  <div class="col-4 text-center mb-5 mt-5">
+                    <p><i class="fab fa-html5 fa-7x"></i></p>
+                    HTML
+                  </div>
+                  <div class="col-4 text-center mb-5 mt-5">
+                    <p><i class="fab fa-css3 fa-7x"></i></p>
+                    CSS
+                  </div>
+                  <div class="col-4 text-center mb-5 mt-5">
+                    <p><i class="fab fa-php fa-7x"></i></p>
+                    PHP
+                  </div>
+                  <div class="col-4 text-center mb-5 mt-5 m-auto">
+                    <p><i class="fab fa-js fa-7x"></i></p>
+                    JS
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <style>
+        #np-skill{
+          min-height : 900px
+        }
+
+        .np-container-skill{
+          position  : relative;
+          height    : 500px;
+          max-width : 2000px
+        }
+
+        .np-content-skill{
+          position  : absolute;
+          color     :white;
+          top       : 100px;
+          width     : 100%
+        }
+
+        .np-inner-content-skill{
+          width     : 60%;
+          margin    : auto;
+        }
+      </style>
+      <!-- SKILL -->
+
+      <!-- PORTFOLIO -->
+      <div class="container" 
+        id="np-portfolio">
+        <div class="text-center mb-5"
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-center">   
+          <h3>Portfolio</h3>
+        </div>
+
+        <div class="row"
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-center">   
+          <div class="col">
+            <div class="card" style="width: 21rem">
+              <a href="https://github.com/litondev/php-native-ejournal"
+                target="_blank">
+                <img src="src/assets/images/portfolio/ejournal/1.png" 
+                  class="card-img-top" 
+                  alt="...">
+              </a>
+              <div class="card-body">
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  Ejournal Dibuat Dengan Php Native
+                </div>
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  <a href="https://github.com/litondev/php-native-ejournal" 
+                    target="_blank">
+                    Sourcecode
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 21rem">
+              <a href="https://github.com/litondev/php-native-simpus-mvc" 
+                target="_blank"><img src="src/assets/images/portfolio/perpus/1.png" 
+                class="card-img-top" 
+                alt="...">
+              </a>
+              <div class="card-body">
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  Simpus Dibuat Dengan Php Native
+                </div>
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  <a href="https://github.com/litondev/php-native-simpus-mvc"
+                    target="_blank">
+                    Sourcecode
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 21rem">
+              <a href="https://github.com/litondev/project-articel" 
+                target="_blank">
+                <img src="src/assets/images/portfolio/project-articel/1.png" 
+                  class="card-img-top" 
+                  alt="...">
+              </a>
+              <div class="card-body">
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  Web Artikel Dibuat Dengan Laravel
+                </div>
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  <a href="https://github.com/litondev/project-articel" 
+                    target="_blank">
+                    Sourcecode
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        #np-portfolio{
+          min-height: 750px;
+        }
+      </style>
+      <!-- PORTFOLIO -->
+
+      <!-- CONTACT -->
+      <div class="container-fluid m-0 p-0" 
+        id="np-contact">
+        <div class="container p-0 np-container-contact">
+            <img src="src/assets/images/background-contact.svg" 
+              style="width:100%"
+              data-aos="fade-up" 
+              data-aos-anchor-placement="top-center">   
+            
+            <div class="np-content-contact"
+              data-aos="fade-up" 
+              data-aos-anchor-placement="top-center">   
+              <h3>Contact</h3>
+
+              <div class="mt-5">
+                Email : <br/>
+                litoninot12345@gmail.com
+              </div>
+            </div>
+        </div>
+      </div>     
+      <style>      
+        .np-container-contact{
+          position    : relative;
+          height      : 450px;
+          max-width   : 2000px
+        }
+
+        .np-content-contact{
+          position    : absolute;
+          top         : 130px;
+          left        : 50px;
+          color       :white;
+        }
+      </style> 
+      <!-- CONTACT -->
+
+      <button onclick="topFunction()" 
+        id="np-btn" 
+        title="Go to top">
+        <i class="fa fa-caret-up fa-2x"></i>
+      </button>
+
+      <style>
+        #np-btn {
+            background: rgb(2,0,36);
+            background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(105,134,219,1) 0%, rgba(122,122,213,1) 100%, rgba(69,160,231,1) 100%, rgba(0,212,255,1) 100%); 
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        #np-btn:hover {
+            background-color: #555;
+        }
+      </style>
+
+      <script>
+        // Get the button
+        var mybutton = document.getElementById("np-btn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+  </body>
+</html>
