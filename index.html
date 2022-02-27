@@ -39,10 +39,68 @@
         </div>        
       </div>
 
+      <div class="container-fluid m-0 p-0"
+        id="np-menu-mobile">
+        <div class="container np-navbar-mobile">
+          <img src="src/assets/images/mobile-background-navbar.svg" 
+            class="np-image-navbar-mobile">
+          
+          <i class="fa fa-align-right fa-2x"
+            id="np-show-container-menu-navbar-mobile"
+            onclick="showMenuMobile()">            
+          </i>
+        </div>
+      </div>
+
+      <div id="np-container-menu-navbar-mobile">
+        <div class="row"
+          style="height:100vh">
+          <div class="col-2 p-3"           
+            id="np-hide-container-menu-navbar-mobile"
+            onclick="hideMenuMobile()">            
+              <i class="fa fa-times fa-2x"></i>
+          </div>
+          <div class="col-10 p-3"
+            id="np-inside-container-menu-navbar-mobile">
+              Menu
+             <ul class="np-navbar-menu-mobile">
+              <li class="np-list-navbar-menu-mobile">
+                <a href="#"
+                  onclick="hideMenuMobile()">           
+                  About
+                </a>
+              </li>
+              <li class="np-list-navbar-menu-mobile">
+                <a href="#np-skill-mobile"
+                  onclick="hideMenuMobile()">           
+                  Skill
+                </a>
+              </li>
+              <li class="np-list-navbar-menu-mobile">
+                <a href="#np-portfolio-mobile"
+                   onclick="hideMenuMobile()">           
+                  Portfolio
+                </a>
+              </li>
+              <li class="np-list-navbar-menu-mobile">
+                <a href="#np-contact-mobile"
+                  onclick="hideMenuMobile()">           
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <!-- BEYOND DEKSTOP -->
       <style>
         @media(min-width: 1948px){
           #np-menu-dekstop{
+            display: none;
+          }
+
+          #np-menu-mobile{
             display: none;
           }
         }
@@ -51,13 +109,17 @@
       <!-- DEKSTOP ONLY -->
       <style>      
         @media (min-width: 1025px) {
+          #np-menu-mobile{
+            display: none;
+          }
+
           #np-menu-dekstop{
             min-height: 200px;
           }
 
           .np-navbar{
               position    : relative;
-              max-width   : 2000%;
+              max-width   : 100%;
               font-size   : 14px;
               height      : 150px;
               padding     : 0px
@@ -121,6 +183,79 @@
           #np-menu-dekstop{
             display: none;
           }
+
+          #np-menu-mobile{
+            min-height: 200px;
+          }
+
+          #np-container-menu-navbar-mobile{
+            display: none;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+          }
+             
+          .np-navbar-mobile{
+              position    : relative;
+              max-width   : 100%;
+              font-size   : 14px;
+              height      : 150px;
+              padding     : 0px
+          }
+
+          .np-navbar-mobile:after {
+              content     : '';
+              display     : block;
+            }
+
+          .np-image-navbar-mobile{          
+            width:100%;
+          }      
+
+          .np-navbar-menu-mobile {
+            list-style: none;
+            list-style-type: none;
+            list-style-position: none;
+            margin: 0px;
+            padding: 0px;
+            margin-top:20px;
+          }
+
+          .np-list-navbar-menu-mobile{
+              list-style: none;
+              list-style-type: none;
+              list-style-position: none;
+              padding-bottom: 10px;
+          }
+
+          .np-list-navbar-menu-mobile > a{            
+              text-decoration: none;
+              color:black;           
+          }
+
+          #np-show-container-menu-navbar-mobile {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+          }
+
+          #np-hide-container-menu-navbar-mobile{
+            text-valign:top;
+            text-align:center;
+            background:black;
+            opacity:0.3;
+            cursor: pointer;
+          }
+
+          #np-inside-container-menu-navbar-mobile{
+            background-color: white;
+            color:black
+          }
         }
       </style>
       <!-- MENU -->
@@ -143,10 +278,27 @@
         </div>
       </div>
 
+      <div class="container d-flex flex-row justify-content-center" 
+        id="np-about-mobile">        
+        <div>
+          <div style="font-size: 2.5rem;" class="mb-2">Hello I'am Toni</div>
+          <div style="font-size: 1.5rem;" class="mb-3">Backend Developer</div>        
+          <div style="line-height: 2rem;font-size:1.2em">        
+            I have experince in web programming at least more than 2 years
+            <br/>
+            I usually using laravel framework due to finish my project 
+          </div>
+        </div>
+      </div>
+
       <!-- BEYOND DEKSTOP -->
       <style>
         @media(min-width: 1948px){
           #np-about-dekstop{
+            display: none !important;
+          }
+
+          #np-about-mobile{
             display: none !important;
           }
         }
@@ -158,6 +310,10 @@
           #np-about-dekstop{
             min-height:600px;
           }
+
+          #np-about-mobile{
+            display: none !important;
+          }
         }
       </style>
       <!-- ABOUT -->
@@ -167,6 +323,15 @@
         @media (min-width: 0px) and (max-width: 1024px) {
           #np-about-dekstop{
             display: none !important;
+          }
+
+          #np-about-mobile{
+            display: black !important;
+            min-height: 400px;
+          }
+
+          #np-about-mobile > div {
+            margin-top: -25px;
           }
         }
       </style>
@@ -212,11 +377,45 @@
         </div>
       </div>
 
+      <div class="container" 
+        id="np-skill-mobile">
+        <div class="text-center mb-5"
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-center">   
+          <h3>Skill</h3>
+        </div>
+
+        <div class="row"
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-center">   
+            <div class="col text-center mb-5 mt-5">
+              <p><i class="fab fa-html5 fa-7x"></i></p>
+              HTML
+            </div>
+            <div class="col text-center mb-5 mt-5">
+              <p><i class="fab fa-css3 fa-7x"></i></p>
+              CSS
+            </div>
+            <div class="col text-center mb-5 mt-5">
+              <p><i class="fab fa-php fa-7x"></i></p>
+              PHP
+            </div>
+            <div class="col text-center mb-5 mt-5 m-auto">
+              <p><i class="fab fa-js fa-7x"></i></p>
+              JS
+            </div>
+        </div>
+      </div>
+
       <!-- BEYOND DEKSTOP -->
       <style>
         @media(min-width: 1948px){
           #np-skill-dekstop{
             display: none;
+          }
+
+          #np-skill-mobile {
+            display:  none;
           }
         }
       </style>
@@ -228,10 +427,14 @@
             min-height : 900px
           }
 
+          #np-skill-mobile {
+            display:  none;
+          }
+
           .np-container-skill{
             position  : relative;
             height    : 500px;
-            max-width : 2000%
+            max-width : 100%
           }
 
           .np-content-skill{
@@ -253,6 +456,11 @@
         @media (min-width: 0px) and (max-width: 1024px) {
           #np-skill-dekstop{
             display: none;
+          }
+
+          #np-skill-mobile {
+            min-height: 400px;
+            display: block;
           }
         }
       </style>    
@@ -343,10 +551,98 @@
         </div>
       </div>
 
+      <div class="container" 
+        id="np-portfolio-mobile">
+        <div class="text-center mb-5"
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-center">   
+          <h3>Portfolio</h3>
+        </div>
+
+        <div class="row"
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-center">   
+          <div class="col mt-2">
+            <div class="card" style="width: 21rem">
+              <a href="https://github.com/litondev/php-native-ejournal"
+                target="_blank">
+                <img src="src/assets/images/portfolio/ejournal/1.png" 
+                  class="card-img-top" 
+                  alt="...">
+              </a>
+              <div class="card-body">
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  Ejournal Make With Php Native
+                </div>
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  <a href="https://github.com/litondev/php-native-ejournal" 
+                    target="_blank">
+                    Sourcecode
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mt-2">
+            <div class="card" style="width: 21rem">
+              <a href="https://github.com/litondev/php-native-simpus-mvc" 
+                target="_blank"><img src="src/assets/images/portfolio/perpus/1.png" 
+                class="card-img-top" 
+                alt="...">
+              </a>
+              <div class="card-body">
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  Simpus Make With Php Native
+                </div>
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  <a href="https://github.com/litondev/php-native-simpus-mvc"
+                    target="_blank">
+                    Sourcecode
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mt-2">
+            <div class="card" style="width: 21rem">
+              <a href="https://github.com/litondev/project-articel" 
+                target="_blank">
+                <img src="src/assets/images/portfolio/project-articel/1.png" 
+                  class="card-img-top" 
+                  alt="...">
+              </a>
+              <div class="card-body">
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  Web Artikel Make With Laravel
+                </div>
+                <div class="card-text text-center mt-3"
+                  style="font-size: 14px;">
+                  <a href="https://github.com/litondev/project-articel" 
+                    target="_blank">
+                    Sourcecode
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- BEYOND DEKSTOP -->
       <style>
         @media(min-width: 1948px){
           #np-portfolio-dekstop{
+            display: none;
+          }
+
+          #np-portfolio-mobile{
             display: none;
           }
         }
@@ -359,6 +655,11 @@
             margin-top: 10%;
             min-height: 750px;
           }
+
+          #np-portfolio-mobile{
+            display: none;
+            min-height: 400px;
+          }
         }
       </style>
 
@@ -367,6 +668,10 @@
         @media (min-width: 0px) and (max-width: 1024px) {
           #np-portfolio-dekstop{
             display: none;
+          }
+
+          #np-portfolio-mobile{
+            display: black;
           }
         }
       </style>    
@@ -409,7 +714,7 @@
           .np-container-contact{
             position    : relative;
             height      : 450px;
-            max-width   : 2000%
+            max-width   : 100%
           }
 
           .np-content-contact{
@@ -487,6 +792,16 @@
           if(screen.width >= 1949){
             alert("Website Not Support Your Monitor");
           }
+        }
+
+        function showMenuMobile(){
+          document.getElementById("np-container-menu-navbar-mobile").style.display = "block";
+          document.body.style.overflow = "hidden";
+        }
+
+        function hideMenuMobile(){
+          document.getElementById("np-container-menu-navbar-mobile").style.display = "none";
+          document.body.style.overflow = "auto";
         }
       </script>
   </body>
