@@ -100,6 +100,10 @@
             display: none;
           }
 
+          #np-container-menu-navbar-mobile{
+            display: none;
+          }
+
           #np-menu-mobile{
             display: none;
           }
@@ -109,6 +113,10 @@
       <!-- DEKSTOP ONLY -->
       <style>      
         @media (min-width: 1025px) {
+          #np-container-menu-navbar-mobile{
+            display: none;
+          }
+
           #np-menu-mobile{
             display: none;
           }
@@ -699,10 +707,35 @@
         </div>
       </div>     
 
+      <div class="container-fluid m-0 p-0" 
+        id="np-contact-mobile">
+        <div class="container p-0 np-container-contact-mobile">
+            <img src="src/assets/images/mobile-background-contact.svg" 
+              style="width:100%"
+              data-aos="fade-up" 
+              data-aos-anchor-placement="top-center">   
+            
+            <div class="np-content-contact-mobile"
+              data-aos="fade-up" 
+              data-aos-anchor-placement="top-center">   
+              <h3>Contact</h3>
+
+              <div class="mt-5">
+                Email : <br/>
+                litoninot12345@gmail.com
+              </div>
+            </div>
+        </div>
+      </div>     
+
       <!-- BEYOND DEKSTOP -->
       <style>
         @media(min-width: 1948px){
           #np-contact-dekstop{
+            display: none;
+          }
+
+          #np-contact-mobile {
             display: none;
           }
         }
@@ -711,6 +744,14 @@
       <!-- DEKSTOP ONLY -->
       <style>      
         @media (min-width: 1025px) {
+          #np-contact-dekstop {
+            display: block;
+          }
+
+          #np-contact-mobile {
+            display: none;
+          }
+
           .np-container-contact{
             position    : relative;
             height      : 450px;
@@ -731,6 +772,23 @@
         @media (min-width: 0px) and (max-width: 1024px) {
           #np-contact-dekstop{
             display: none;
+          }
+
+          #np-contact-mobile {
+            display: block;
+            margin-top: 100px !important;
+          }
+
+          .np-container-contact-mobile{
+            position    : relative;
+            max-width   : 100%
+          }
+
+          .np-content-contact-mobile{
+            position    : absolute;
+            top         : 90px;
+            left        : 10px;
+            color       :white;
           }
         }
       </style>    
