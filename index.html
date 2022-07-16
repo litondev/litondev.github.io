@@ -4,7 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <script src="src/assets/vendors/fontawesome/js/all.min.js"></script>
-  <script defer src="js/popperjs.js"></script><script defer src="js/bootstrap.js"></script><script defer src="js/main.js"></script><link href="css/bootstrap.css" rel="stylesheet"><link href="css/main.css" rel="stylesheet"></head>
+    <script defer src="js/popperjs.js"></script>
+    <script defer src="js/bootstrap.js">
+    </script><script defer src="js/main.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Poppins:ital,wght@0,100;0,200;1,200&family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <style>
+      body{
+        font-family: 'Nunito', sans-serif;
+      }
+    </style>
+  </head>
   <body class="m-0 p-0">
 
       <!-- MENU -->
@@ -167,20 +180,19 @@
               width:90px;
               text-decoration: none;
               color:white;
-              border-bottom:1.5px solid white;
+              border-bottom:1.5px solid none;
               padding-bottom: 5px;
               padding-top: 5px;
-              transition: backgroud 1s,color 1s, border 1s;
+              transition: backgroud 0.5s,color 0.5s;
+              font-weight:  bold;
           }
 
           .np-list-navbar-menu > a.active{
-              border-bottom:2px solid none;
+              border-bottom:1.5px solid white;          
           }
 
-          .np-list-navbar-menu > a:hover{
-              background-color: white;
-              color : black;
-              border-bottom:2px solid none;
+          .np-list-navbar-menu > a:hover{            
+              border-bottom:1.5px solid white;
           }
         }      
       </style>
@@ -275,7 +287,7 @@
           <img src="src/assets/images/my.svg" 
             style="height:450px">
         </div>
-        <div class="mt-5">
+        <div style="margin-top:150px">
           <div style="font-size: 2.5rem;" class="mb-2">Hello I'am Toni</div>
           <div style="font-size: 1.5rem;" class="mb-3">Backend Developer</div>        
           <div style="line-height: 2rem;font-size:1.2em">        
@@ -798,7 +810,7 @@
       <button onclick="topFunction()" 
         id="np-btn" 
         title="Go to top">
-        <i class="fa fa-caret-up fa-2x"></i>
+        <i class="fa fa-caret-up fa-1x"></i>
       </button>
 
       <style>
